@@ -17,4 +17,4 @@ def get_message_history(_, message: types.Message):
             return message.reply("No edits available for that message!")
         doc = BytesIO(generate_edit_history(frame).encode())
         doc.name = "edit-history.html"
-        return message.reply_to_message.reply_document(doc)
+        return message.reply_to_message.reply_document(doc, quote=True)
