@@ -6,7 +6,7 @@ from userbot.utilities import insert_chat
 from io import BytesIO
 
 
-@Client.on_message(filters.command("!eh") & filters.user("jonatan1609"), group=1)
+@Client.on_message(filters.command("eh", "!") & filters.user("jonatan1609"), group=1)
 def get_message_history(_, message: types.Message):
     if not message.reply_to_message:
         return message.reply("You have to reply to a message!")
