@@ -3,3 +3,8 @@ venv
 config.ini
 *.session
 *.session-journal
+*.pyc
+__pycache__
+*/__pycache__
+features
+downloads
