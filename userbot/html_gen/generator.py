@@ -8,6 +8,7 @@ def generate_username(username: str):
 
 def generate_edit_history(message_frame: MessageFrame) -> str:
     elements = [
+        ElementHead(ElementMeta(charset="utf-8")),
         ElementCenter(ElementH2(ElementU("Edit history"))),
         ElementSpan("Name: " + ElementI(message_frame.sender.first_name)),
         ElementSpan(" [" + ElementStrong(["User", "Bot"][message_frame.sender.is_bot]) + "]")

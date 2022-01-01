@@ -21,7 +21,7 @@ def insert_user(user: User):
         return user_obj
     return DbUser(
         id=user.id,
-        first_name=user.first_name.encode('ascii', 'ignroe').decode(),
+        first_name=user.first_name,
         username=user.username,
         is_bot=user.is_bot,
         profile_picture=getattr(user.photo, "big_file_id", None)

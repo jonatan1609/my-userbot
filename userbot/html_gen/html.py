@@ -61,3 +61,11 @@ class ElementDiv(Element):
 
 class ElementTextArea(Element):
     pass
+
+
+class ElementHead(Element):
+    pass
+
+
+class ElementMeta(Element):
+    __no_content__ = True
