@@ -42,7 +42,10 @@ def get_media(message: Message):
 
 
 def modify_path(path: str):
-    path = Path(path)
-    new_name = uuid4().hex + "." + path.name.rsplit(".")[-1]
-    rename(str(path), str(path.parent / new_name))
-    return str(path.parent / new_name)
+    if path:
+        path = Path(path)
+        new_name = uuid4().hex + "." + path.name.rsplit(".")[-1]
+        rename(str(path), str(path.parent / new_name))
+        return str(path.parent / new_name)
+    return uuid4().hex
+
